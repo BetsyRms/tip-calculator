@@ -1,0 +1,10 @@
+body{
+    width: 375px;
+    height: 600px;
+    background-color: #D7EDED;
+}
+.conteiner{
+    background-color: white;
+    width: 375px;
+    height: 50%;
+}

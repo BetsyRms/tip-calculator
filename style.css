@@ -1,10 +1,65 @@
 body{
     width: 375px;
-    height: 600px;
-    background-color: #D7EDED;
+    height: 667px;
+    margin: 0px;
+    background-color: #C5E4E7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
 }
 .conteiner{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     background-color: white;
     width: 375px;
-    height: 50%;
+    height: 550px;
+    border-radius: 20px 20px 0px 0px;
 }
+.divBill{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 30px;
+}
+.text{
+    color: #6B797A;
+    font-family: 'Space Mono', monospace;
+    font-size: medium;
+}
+.amount{
+    border: none;
+    background-color: #F3F8FB;
+    font-size: 24px;
+    color: #0A4847;
+    font-weight: 1000;
+    font-family: 'Space Mono', monospace;
+    text-align: end;
+    background-image: url(./images/icon-dollar.svg);
+    background-repeat: no-repeat;
+    background-position: 20px center;
+    width: 305px;
+}
+::placeholder {
+    color: #A2BCB9;
+    font-size: 24px;
+    font-family: 'Space Mono', monospace;
+    text-align: start;
+    font-weight: 100;
+  }
+  .divTip{
+    margin-left: 30px;
+  }
+  .button1, .button2, .button3, .button4, .button5, .button6{
+    width: 140px;
+    height: 45px;
+    margin: 8px;
+    background-color:  #0A4847;
+    color: white;
+    border-radius: 5px;
+    font-family: 'Space Mono', monospace;
+    font-size: 24px;
+    font-weight: bold;
+  }

@@ -14,6 +14,7 @@ const main = () =>{
   bill.textContent = 'Bill'
 
   const amount = document.createElement('input')
+  amount.setAttribute('type', 'number')
   amount.className = 'amount'
 
   const divTip = document.createElement('div')
@@ -51,12 +52,29 @@ const main = () =>{
 
   const inputPeople = document.createElement('input')
   inputPeople.className = 'inputPeople'
+  inputPeople.setAttribute('type', 'number')
+
+  const divResults = document.createElement('div')
+  divResults.className = 'divResults'
+
+  const tipAmount = document.createElement('h3')
+  tipAmount.className = 'textH3'
+  tipAmount.textContent = 'Tip Amount'
+
+  const total = document.createElement('h3')
+  total.className = 'textH3'
+  total.textContent = 'Total'
+
+  const reset = document.createElement('button')
+  reset.className = 'reset'
+  reset.textContent = 'RESET'
 
   divBill.append(bill, amount)
   divTip.append(selectTip, button1, button2, button3, button4, button5, button6)
   divNumberPeople.append(numberPeople, inputPeople)
+  divResults.append(tipAmount, total, reset)
 
-  conteiner.append(divBill, divTip, divNumberPeople)
+  conteiner.append(divBill, divTip, divNumberPeople, divResults)
   return conteiner;
 }
 

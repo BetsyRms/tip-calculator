@@ -1,11 +1,11 @@
 body{
-    width: 375px;
-    height: 667px;
+    width: 390px;
+    height: 844px;
     margin: 0px;
     background-color: #C5E4E7;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: end;
 }
 .conteiner{
@@ -13,21 +13,23 @@ body{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: center;
     background-color: white;
-    width: 375px;
-    height: 550px;
+    width: 390px;
+    height: 680px;
     border-radius: 20px 20px 0px 0px;
 }
 .divBill{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin-left: 30px;
+    margin: 0px 25px 0px 25px;
 }
 .text{
     color: #6B797A;
     font-family: 'Space Mono', monospace;
     font-size: medium;
+    margin: 8px;
 }
 .amount{
     border: none;
@@ -40,7 +42,7 @@ body{
     background-image: url(./images/icon-dollar.svg);
     background-repeat: no-repeat;
     background-position: 20px center;
-    width: 305px;
+    width: 320px;
 }
 ::placeholder {
     color: #A2BCB9;
@@ -49,12 +51,12 @@ body{
     text-align: start;
     font-weight: 100;
   }
-  .divTip{
-    margin-left: 30px;
+.divTip{
+    margin: 0px 25px 0px 25px;
   }
-  .button1, .button2, .button3, .button4, .button5, .button6{
-    width: 140px;
-    height: 45px;
+.button1, .button2, .button3, .button4, .button5{
+    width: 150px;
+    height: 50px;
     margin: 8px;
     background-color:  #0A4847;
     color: white;
@@ -62,4 +64,62 @@ body{
     font-family: 'Space Mono', monospace;
     font-size: 24px;
     font-weight: bold;
+    border-width: inherit;
   }
+.button6{
+    width: 150px;
+    height: 50px;
+    margin: 8px;
+    background-color:  #F3F8FB;
+    color: #A2BCB9;
+    border-radius: 5px;
+    font-family: 'Space Mono', monospace;
+    font-size: 24px;
+    font-weight: bold;
+    border-width: inherit;
+}
+.button1:hover, .button2:hover, .button3:hover, .button4:hover, .button5:hover, .button6:hover{
+    background-color: #26C2AD;
+    color: #0A4847;
+  }
+.divNumberPeople{
+    margin: 0px 40px 0px 40px;
+  }
+.inputPeople{
+    border: none;
+    background-color: #F3F8FB;
+    font-size: 24px;
+    color: #0A4847;
+    font-weight: 1000;
+    font-family: 'Space Mono', monospace;
+    text-align: end;
+    background-image: url(./images/icon-person.svg);
+    background-repeat: no-repeat;
+    background-position: 20px center;
+    width: 305px;
+}
+.divResults{
+    width: 312px;
+    background-color: #0A4847;
+    margin: 20px 40px 20px 40px;
+    border-radius: 10px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.textH3{
+    color: #F3F8FB;
+    font-family: 'Space Mono', monospace;
+    font-size: medium;
+}
+.reset{
+    width: 270px;
+    height: 50px;
+    background-color: #26C2AD;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 700;
+    font-stretch: condensed;
+}

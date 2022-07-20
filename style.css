@@ -5,7 +5,7 @@ body{
     background-color: #C5E4E7;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: end;
 }
 .conteiner{
@@ -16,14 +16,14 @@ body{
     justify-content: center;
     background-color: white;
     width: 390px;
-    height: 680px;
+    height: 700px;
     border-radius: 20px 20px 0px 0px;
 }
 .divBill{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin: 0px 25px 0px 25px;
+    margin: 25px 25px 0px 25px;
 }
 .text{
     color: #6B797A;
@@ -42,7 +42,7 @@ body{
     background-image: url(./images/icon-dollar.svg);
     background-repeat: no-repeat;
     background-position: 20px center;
-    width: 320px;
+    width: 335px;
 }
 ::placeholder {
     color: #A2BCB9;
@@ -57,7 +57,7 @@ body{
 .button1, .button2, .button3, .button4, .button5{
     width: 150px;
     height: 50px;
-    margin: 8px;
+    margin: 9px;
     background-color:  #0A4847;
     color: white;
     border-radius: 5px;
@@ -69,14 +69,20 @@ body{
 .button6{
     width: 150px;
     height: 50px;
-    margin: 8px;
+    margin: 9px;
     background-color:  #F3F8FB;
-    color: #A2BCB9;
     border-radius: 5px;
-    font-family: 'Space Mono', monospace;
     font-size: 24px;
-    font-weight: bold;
     border-width: inherit;
+    font-family: 'Space Mono', monospace;
+    font-weight: bold;
+}
+.button6::placeholder{
+    text-align: center;
+    font-weight: bold;
+    color: #A2BCB9;
+    font-family: 'Space Mono', monospace;
+
 }
 .button1:hover, .button2:hover, .button3:hover, .button4:hover, .button5:hover, .button6:hover{
     background-color: #26C2AD;
@@ -99,27 +105,53 @@ body{
     width: 305px;
 }
 .divResults{
+    position: relative;
     width: 312px;
     background-color: #0A4847;
     margin: 20px 40px 20px 40px;
     border-radius: 10px;
-    height: 300px;
+    height: 250px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 .textH3{
+    margin: 25px;
     color: #F3F8FB;
     font-family: 'Space Mono', monospace;
-    font-size: medium;
+    font-size: 14px;
+}
+.tipNumber, .tipTotal{
+    font-family: 'Space Mono', monospace;
+    font-size: 26px;
+    color: #26C2AD;
+    margin: 25px;
 }
 .reset{
     width: 270px;
-    height: 50px;
-    background-color: #26C2AD;
+    height: 45px;
+    background-color: #0D686D;
     border-radius: 5px;
-    font-size: 18px;
-    font-weight: 700;
+    font-size: 19px;
+    font-weight: bolder;
     font-stretch: condensed;
+    margin: 0px 20px 20px 20px;
+    border-width: inherit;
+    color: #075F63;
+}
+.byPerson, .byPerson2{
+    position: absolute;
+    color: #A2BCB9;
+    font-family: 'Space Mono', monospace;
+    font-size: small;
+}
+.byPerson{
+    top: 475px;
+    left: 65px;
+}
+.byPerson2{
+    top: 560px;
+    left: 65px;
 }

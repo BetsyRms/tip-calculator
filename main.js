@@ -10,7 +10,7 @@ const main = () =>{
   divBill.className = 'divBill'
 
   const bill = document.createElement('h2')
-  bill.className = 'text'
+  bill.className = 'bill'
   bill.textContent = 'Bill'
 
   const amount = document.createElement('input')
@@ -21,63 +21,57 @@ const main = () =>{
   divTip.className = 'divTip'
 
   const selectTip = document.createElement('h2')
-  selectTip.className = 'text'
+  selectTip.className = 'selectTip'
   selectTip.textContent = 'Select Tip %'
 
   const button1 = document.createElement('button')
   button1.className = 'button1'
   button1.textContent = '5%'
   button1.addEventListener('click', ()=>{
-    console.log(amount.value)
     let fivePercent = amount.value * 0.05
-    console.log(fivePercent/inputPeople.value)
+    tipNumber.innerText = '$'+fivePercent/inputPeople.value
   })
   const button2 = document.createElement('button')
   button2.className = 'button2'
   button2.textContent = '10%'
   button2.addEventListener('click', ()=>{
-    console.log(amount.value)
     let tenPercent = amount.value * 0.10
-    console.log(tenPercent/inputPeople.value)
+    tipNumber.innerText = '$'+tenPercent/inputPeople.value
   })
   const button3 = document.createElement('button')
   button3.className = 'button3'
   button3.textContent = '15%'
   button3.addEventListener('click', ()=>{
-    console.log(amount.value)
     let fiveteenPercent = amount.value * 0.15
-    console.log(fiveteenPercent/inputPeople.value)
+    tipNumber.innerText = '$'+fiveteenPercent/inputPeople.value
   })
   const button4 = document.createElement('button')
   button4.className = 'button4'
   button4.textContent = '25%'
   button4.addEventListener('click', ()=>{
-    console.log(amount.value)
     let tweentyFivePercent = amount.value * 0.25
-    console.log(tweentyFivePercent/inputPeople.value)
+    tipNumber.innerText = '$'+tweentyFivePercent/inputPeople.value
   })
   const button5 = document.createElement('button')
   button5.className = 'button5'
   button5.textContent = '50%'
   button5.addEventListener('click', ()=>{
-    console.log(amount.value)
-    let tweentyFivePercent = amount.value * 0.50
-    console.log(tweentyFivePercent/inputPeople.value)
+    let fiftyPercent = amount.value * 0.50
+    tipNumber.innerText = '$'+fiftyPercent/inputPeople.value
   })
   const button6 = document.createElement('input')
   button6.className = 'button6'
   button6.placeholder = 'Custom'
   button6.addEventListener('keyup', ()=>{
-    console.log(amount.value)
-    let tweentyFivePercent = amount.value * button6.value /
-    console.log(tweentyFivePercent/inputPeople.value)
+    let custom = amount.value * button6.value / 100
+    tipNumber.innerText = '$'+custom/inputPeople.value
   })
 
   const divNumberPeople = document.createElement('div')
   divNumberPeople.className = 'divNumberPeople'
 
   const numberPeople = document.createElement('h2')
-  numberPeople.className = 'text'
+  numberPeople.className = 'numberPeople'
   numberPeople.textContent = 'Number of People'
 
   const inputPeople = document.createElement('input')
@@ -86,6 +80,9 @@ const main = () =>{
 
   const divResults = document.createElement('div')
   divResults.className = 'divResults'
+
+  const divTipAmount = document.createElement('div')
+  divTipAmount.className = 'divTipAmount'
 
   const tipAmount = document.createElement('h3')
   tipAmount.className = 'textH3'
@@ -98,6 +95,9 @@ const main = () =>{
   const byPerson = document.createElement('h4')
   byPerson.className = 'byPerson'
   byPerson.textContent = '/ person'
+
+  const divTotal = document.createElement('div')
+  divTotal.className = 'divTotal'
 
   const total = document.createElement('h3')
   total.className = 'textH3'
@@ -114,13 +114,18 @@ const main = () =>{
   const reset = document.createElement('button')
   reset.className = 'reset'
   reset.textContent = 'RESET'
+  reset.addEventListener('click', ()=>{
+    location.href=location.href
+  })
 
   divBill.append(bill, amount)
-  divTip.append(selectTip, button1, button2, button3, button4, button5, button6)
+  divTip.append(button1, button2, button3, button4, button5, button6)
   divNumberPeople.append(numberPeople, inputPeople)
-  divResults.append(tipAmount, tipNumber, total, tipTotal, reset)
+  divTipAmount.append(tipAmount, tipNumber)
+  divTotal.append(total, tipTotal)
+  divResults.append(divTipAmount, divTotal, reset)
 
-  conteiner.append(divBill, divTip, divNumberPeople, divResults, byPerson, byPerson2)
+  conteiner.append(divBill, selectTip, divTip, divNumberPeople, divResults, byPerson, byPerson2)
   return conteiner;
 }
 

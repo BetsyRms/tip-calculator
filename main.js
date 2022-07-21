@@ -28,43 +28,61 @@ const main = () =>{
   button1.className = 'button1'
   button1.textContent = '5%'
   button1.addEventListener('click', ()=>{
-    let fivePercent = amount.value * 0.05
-    tipNumber.innerText = '$'+fivePercent/inputPeople.value
+       let fivePercent = amount.value * 0.05 / inputPeople.value
+    tipNumber.innerText = '$'+fivePercent.toFixed(2)
+    let billByPerson = amount.value/inputPeople.value
+    let totalFivePercent = billByPerson+fivePercent
+    tipTotal.innerText = '$'+totalFivePercent.toFixed(2)
   })
   const button2 = document.createElement('button')
   button2.className = 'button2'
   button2.textContent = '10%'
   button2.addEventListener('click', ()=>{
-    let tenPercent = amount.value * 0.10
-    tipNumber.innerText = '$'+tenPercent/inputPeople.value
+    let tenPercent = amount.value * 0.10/inputPeople.value
+    tipNumber.innerText = '$'+tenPercent.toFixed(2)
+    let billByPerson = amount.value/inputPeople.value
+    let totalTenPercent = billByPerson+tenPercent
+    tipTotal.innerText = '$'+totalTenPercent.toFixed(2)
   })
   const button3 = document.createElement('button')
   button3.className = 'button3'
   button3.textContent = '15%'
   button3.addEventListener('click', ()=>{
-    let fiveteenPercent = amount.value * 0.15
-    tipNumber.innerText = '$'+fiveteenPercent/inputPeople.value
+    let fifteenPercent = amount.value * 0.15/inputPeople.value
+    tipNumber.innerText = '$'+fifteenPercent.toFixed(2)
+    let billByPerson = amount.value/inputPeople.value
+    let totalfiftenPercent = billByPerson+fifteenPercent
+    tipTotal.innerText = '$'+totalfiftenPercent.toFixed(2)
   })
   const button4 = document.createElement('button')
   button4.className = 'button4'
   button4.textContent = '25%'
   button4.addEventListener('click', ()=>{
-    let tweentyFivePercent = amount.value * 0.25
-    tipNumber.innerText = '$'+tweentyFivePercent/inputPeople.value
+    let twentyFivePercent = amount.value * 0.25/inputPeople.value
+    tipNumber.innerText = '$'+twentyFivePercent.toFixed(2)
+    let billByPerson = amount.value/inputPeople.value
+    let totalTwentyFivePercent = billByPerson+twentyFivePercent
+    tipTotal.innerText = '$'+totalTwentyFivePercent.toFixed(2)
   })
   const button5 = document.createElement('button')
   button5.className = 'button5'
   button5.textContent = '50%'
   button5.addEventListener('click', ()=>{
-    let fiftyPercent = amount.value * 0.50
-    tipNumber.innerText = '$'+fiftyPercent/inputPeople.value
+    let fiftyPercent = amount.value * 0.50/inputPeople.value
+    tipNumber.innerText = '$'+fiftyPercent.toFixed(2)
+    let billByPerson = amount.value/inputPeople.value
+    let totalFiftyPercent = billByPerson+fiftyPercent
+    tipTotal.innerText = '$'+totalFiftyPercent.toFixed(2)
   })
   const button6 = document.createElement('input')
   button6.className = 'button6'
   button6.placeholder = 'Custom'
   button6.addEventListener('keyup', ()=>{
-    let custom = amount.value * button6.value / 100
-    tipNumber.innerText = '$'+custom/inputPeople.value
+    let custom = amount.value * button6.value / 100 /inputPeople.value
+    tipNumber.innerText = '$'+custom.toFixed(2)
+    let billByPerson = amount.value/inputPeople.value
+    let totalPercent = billByPerson+custom
+    tipTotal.innerText = '$'+totalPercent.toFixed(2)
   })
 
   const divNumberPeople = document.createElement('div')
@@ -115,7 +133,7 @@ const main = () =>{
   reset.className = 'reset'
   reset.textContent = 'RESET'
   reset.addEventListener('click', ()=>{
-    location.href=location.href
+      location.href=location.href
   })
 
   divBill.append(bill, amount)

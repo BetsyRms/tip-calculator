@@ -33,6 +33,9 @@ const main = () =>{
     let billByPerson = amount.value/inputPeople.value
     let totalFivePercent = billByPerson+fivePercent
     tipTotal.innerText = '$'+totalFivePercent.toFixed(2)
+    if(fivePercent.value!==NaN){
+      reset.disabled = false
+    }
   })
   const button2 = document.createElement('button')
   button2.className = 'button2'
@@ -43,6 +46,9 @@ const main = () =>{
     let billByPerson = amount.value/inputPeople.value
     let totalTenPercent = billByPerson+tenPercent
     tipTotal.innerText = '$'+totalTenPercent.toFixed(2)
+    if(tenPercent.value!==NaN){
+      reset.disabled = false
+    }
   })
   const button3 = document.createElement('button')
   button3.className = 'button3'
@@ -53,6 +59,9 @@ const main = () =>{
     let billByPerson = amount.value/inputPeople.value
     let totalfiftenPercent = billByPerson+fifteenPercent
     tipTotal.innerText = '$'+totalfiftenPercent.toFixed(2)
+    if(fifteenPercent.value!==NaN){
+      reset.disabled = false
+    }
   })
   const button4 = document.createElement('button')
   button4.className = 'button4'
@@ -63,6 +72,9 @@ const main = () =>{
     let billByPerson = amount.value/inputPeople.value
     let totalTwentyFivePercent = billByPerson+twentyFivePercent
     tipTotal.innerText = '$'+totalTwentyFivePercent.toFixed(2)
+    if(twentyFivePercent.value!==NaN){
+      reset.disabled = false
+    }
   })
   const button5 = document.createElement('button')
   button5.className = 'button5'
@@ -73,6 +85,9 @@ const main = () =>{
     let billByPerson = amount.value/inputPeople.value
     let totalFiftyPercent = billByPerson+fiftyPercent
     tipTotal.innerText = '$'+totalFiftyPercent.toFixed(2)
+    if(fiftyPercent.value!==NaN){
+      reset.disabled = false
+    }
   })
   const button6 = document.createElement('input')
   button6.className = 'button6'
@@ -83,6 +98,9 @@ const main = () =>{
     let billByPerson = amount.value/inputPeople.value
     let totalPercent = billByPerson+custom
     tipTotal.innerText = '$'+totalPercent.toFixed(2)
+    if(custom.value!==NaN){
+      reset.disabled = false
+    }
   })
 
   const divNumberPeople = document.createElement('div')
@@ -132,8 +150,9 @@ const main = () =>{
   const reset = document.createElement('button')
   reset.className = 'reset'
   reset.textContent = 'RESET'
+  reset.disabled = true
   reset.addEventListener('click', ()=>{
-      location.href=location.href
+    location.href=location.href
   })
 
   divBill.append(bill, amount)

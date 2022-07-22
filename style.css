@@ -146,19 +146,10 @@ body{
     color: #26C2AD;
     margin-right: 25px;
 }
-.reset{
-    width: 270px;
-    height: 45px;
+.reset:disabled{
     background-color: #0D686D;
-    border-radius: 5px;
-    font-size: 19px;
-    font-weight: bolder;
-    font-stretch: condensed;
-    margin: 0px 20px 20px 20px;
-    border-width: inherit;
-    color: #075F63;
 }
-.reset2{
+.reset{
     width: 270px;
     height: 45px;
     border-radius: 5px;

@@ -28,7 +28,7 @@ const main = () =>{
   button1.className = 'button1'
   button1.textContent = '5%'
   button1.addEventListener('click', ()=>{
-       let fivePercent = amount.value * 0.05 / inputPeople.value
+    let fivePercent = amount.value * 0.05 / inputPeople.value
     tipNumber.innerText = '$'+fivePercent.toFixed(2)
     let billByPerson = amount.value/inputPeople.value
     let totalFivePercent = billByPerson+fivePercent

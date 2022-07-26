@@ -88,6 +88,11 @@ const main = () =>{
     let billByPerson = amount.value/inputPeople.value
     let totalTwentyFivePercent = billByPerson+twentyFivePercent
     tipTotal.innerText = '$'+totalTwentyFivePercent.toFixed(2)
+    if(inputPeople.value==0){
+      alert('Please set amount')
+      tipNumber.innerText = '$0.00'
+      tipTotal.innerText = '$0.00'
+    }
     if(twentyFivePercent.value!==NaN){
       reset.disabled = false
     }

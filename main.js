@@ -24,6 +24,7 @@ const main = () =>{
   selectTip.className = 'selectTip'
   selectTip.textContent = 'Select Tip %'
 
+
   const button1 = document.createElement('button')
   button1.className = 'button1'
   button1.textContent = '5%'
@@ -33,7 +34,12 @@ const main = () =>{
     let billByPerson = amount.value/inputPeople.value
     let totalFivePercent = billByPerson+fivePercent
     tipTotal.innerText = '$'+totalFivePercent.toFixed(2)
-    if(fivePercent.value!==NaN){
+    if(inputPeople.value==0){
+      alert('Please set amount')
+      tipNumber.innerText = '$0.00'
+      tipTotal.innerText = '$0.00'
+    }
+    if(fivePercent.value!=='$0.00'){
       reset.disabled = false
     }
   })
@@ -46,6 +52,11 @@ const main = () =>{
     let billByPerson = amount.value/inputPeople.value
     let totalTenPercent = billByPerson+tenPercent
     tipTotal.innerText = '$'+totalTenPercent.toFixed(2)
+    if(inputPeople.value==0){
+      alert('Please set amount')
+      tipNumber.innerText = '$0.00'
+      tipTotal.innerText = '$0.00'
+    }
     if(tenPercent.value!==NaN){
       reset.disabled = false
     }
@@ -59,6 +70,11 @@ const main = () =>{
     let billByPerson = amount.value/inputPeople.value
     let totalfiftenPercent = billByPerson+fifteenPercent
     tipTotal.innerText = '$'+totalfiftenPercent.toFixed(2)
+    if(inputPeople.value==0){
+      alert('Please set amount')
+      tipNumber.innerText = '$0.00'
+      tipTotal.innerText = '$0.00'
+    }
     if(fifteenPercent.value!==NaN){
       reset.disabled = false
     }
@@ -85,6 +101,11 @@ const main = () =>{
     let billByPerson = amount.value/inputPeople.value
     let totalFiftyPercent = billByPerson+fiftyPercent
     tipTotal.innerText = '$'+totalFiftyPercent.toFixed(2)
+    if(inputPeople.value==0){
+      alert('Please set amount')
+      tipNumber.innerText = '$0.00'
+      tipTotal.innerText = '$0.00'
+    }
     if(fiftyPercent.value!==NaN){
       reset.disabled = false
     }
@@ -98,6 +119,11 @@ const main = () =>{
     let billByPerson = amount.value/inputPeople.value
     let totalPercent = billByPerson+custom
     tipTotal.innerText = '$'+totalPercent.toFixed(2)
+    if(button6.value==0 || inputPeople.value==0){
+      alert('Please set amount')
+      tipNumber.innerText = '$0.00'
+      tipTotal.innerText = '$0.00'
+    }
     if(custom.value!==NaN){
       reset.disabled = false
     }
@@ -113,6 +139,11 @@ const main = () =>{
   const inputPeople = document.createElement('input')
   inputPeople.className = 'inputPeople'
   inputPeople.setAttribute('type', 'number')
+  // inputPeople.addEventListener('keyup', ()=>{
+  //   if(inputPeople.value==0){
+  //     button1.disabled = false
+  //   }
+  // })
 
   const divResults = document.createElement('div')
   divResults.className = 'divResults'

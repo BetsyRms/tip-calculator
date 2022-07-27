@@ -1,5 +1,5 @@
 const mainDiv = document.getElementById('main');
-
+// comentario
 const tipArray = ['5%','10%', '15%', '20%', '50%', 'Custum']
 
 const main = () =>{
@@ -88,7 +88,7 @@ const main = () =>{
     let billByPerson = amount.value/inputPeople.value
     let totalTwentyFivePercent = billByPerson+twentyFivePercent
     tipTotal.innerText = '$'+totalTwentyFivePercent.toFixed(2)
-    if(inputPeople.value==0){
+     if(inputPeople.value==0){
       alert('Please set amount')
       tipNumber.innerText = '$0.00'
       tipTotal.innerText = '$0.00'

@@ -34,12 +34,12 @@ const main = () =>{
     let billByPerson = amount.value/inputPeople.value
     let totalFivePercent = billByPerson+fivePercent
     tipTotal.innerText = '$'+totalFivePercent.toFixed(2)
-    if(inputPeople.value==0){
-      alert('Please set amount')
+    if(amount.value==0 || inputPeople.value==0){
+      alert('Please set Bill/Number of People')
       tipNumber.innerText = '$0.00'
       tipTotal.innerText = '$0.00'
-    }
-    if(fivePercent.value!=='$0.00'){
+      reset.disabled = true
+    }else if(fivePercent.value!='$0.00'){
       reset.disabled = false
     }
   })
@@ -52,12 +52,12 @@ const main = () =>{
     let billByPerson = amount.value/inputPeople.value
     let totalTenPercent = billByPerson+tenPercent
     tipTotal.innerText = '$'+totalTenPercent.toFixed(2)
-    if(inputPeople.value==0){
-      alert('Please set amount')
+    if(amount.value==0 || inputPeople.value==0){
+      alert('Please set Bill/Number of People')
       tipNumber.innerText = '$0.00'
       tipTotal.innerText = '$0.00'
-    }
-    if(tenPercent.value!==NaN){
+      reset.disabled = true
+    }else if(tenPercent.value!='$0.00'){
       reset.disabled = false
     }
   })
@@ -70,12 +70,12 @@ const main = () =>{
     let billByPerson = amount.value/inputPeople.value
     let totalfiftenPercent = billByPerson+fifteenPercent
     tipTotal.innerText = '$'+totalfiftenPercent.toFixed(2)
-    if(inputPeople.value==0){
-      alert('Please set amount')
+    if(amount.value==0 || inputPeople.value==0){
+      alert('Please set Bill/Number of People')
       tipNumber.innerText = '$0.00'
       tipTotal.innerText = '$0.00'
-    }
-    if(fifteenPercent.value!==NaN){
+      reset.disabled = true
+    }else if(fifteenPercent.value!='$0.00'){
       reset.disabled = false
     }
   })
@@ -88,12 +88,12 @@ const main = () =>{
     let billByPerson = amount.value/inputPeople.value
     let totalTwentyFivePercent = billByPerson+twentyFivePercent
     tipTotal.innerText = '$'+totalTwentyFivePercent.toFixed(2)
-     if(inputPeople.value==0){
-      alert('Please set amount')
+    if(amount.value==0 || inputPeople.value==0){
+      alert('Please set Bill/Number of People')
       tipNumber.innerText = '$0.00'
       tipTotal.innerText = '$0.00'
-    }
-    if(twentyFivePercent.value!==NaN){
+      reset.disabled = true
+    }else if(twentyFivePercent.value!='$0.00'){
       reset.disabled = false
     }
   })
@@ -106,12 +106,12 @@ const main = () =>{
     let billByPerson = amount.value/inputPeople.value
     let totalFiftyPercent = billByPerson+fiftyPercent
     tipTotal.innerText = '$'+totalFiftyPercent.toFixed(2)
-    if(inputPeople.value==0){
-      alert('Please set amount')
+    if(amount.value==0 || inputPeople.value==0){
+      alert('Please set Bill/Number of People')
       tipNumber.innerText = '$0.00'
       tipTotal.innerText = '$0.00'
-    }
-    if(fiftyPercent.value!==NaN){
+      reset.disabled = true
+    }else if(fiftyPercent.value!='$0.00'){
       reset.disabled = false
     }
   })
@@ -125,11 +125,11 @@ const main = () =>{
     let totalPercent = billByPerson+custom
     tipTotal.innerText = '$'+totalPercent.toFixed(2)
     if(button6.value==0 || inputPeople.value==0){
-      alert('Please set amount')
+      alert('Please set Bill/Number of People')
       tipNumber.innerText = '$0.00'
       tipTotal.innerText = '$0.00'
-    }
-    if(custom.value!==NaN){
+      reset.disabled = true
+    }else if(custom.value!='$0.00'){
       reset.disabled = false
     }
   })
